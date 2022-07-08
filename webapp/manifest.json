@@ -1,0 +1,166 @@
+{
+  "_version": "1.32.0",
+  "sap.app": {
+    "id": "zz1cartoes",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.99.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "zz1cartoes.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true,
+          "groupId": "$direct"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "zz1cartoes.view",
+        "controlAggregation": "pages",
+        "controlId": "app"
+      },
+      "routes": [
+        {
+          "name": "View1",
+          "pattern": "",
+          "target": [
+            "View1"
+          ]
+        },
+        {
+            "name": "View2",
+            "pattern": "View2",
+            "target": [
+                "View2"
+            ]
+        },
+        {
+            "name": "View3",
+            "pattern": "View3",
+            "target": [
+                "View3"
+            ]
+        },
+        {
+            "name": "View4",
+            "pattern": "View4",
+            "target": [
+                "View4"
+            ]
+        },
+        {
+            "name": "View5",
+            "pattern": "View5",
+            "target": [
+                "View5"
+            ]
+        }
+      ],
+      "targets": {
+        "View1": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewId": "View1",
+          "viewName": "View1"
+        },
+        "View2": {
+            "viewType": "XML",
+            "viewId": "View2",
+            "viewName": "View2"
+        },
+        "View3": {
+            "viewType": "XML",
+            "viewId": "View3",
+            "viewName": "View3"
+        },
+        "View4": {
+            "viewType": "XML",
+            "viewId": "View4",
+            "viewName": "View4"
+        },
+        "View5": {
+            "viewType": "XML",
+            "viewId": "View5",
+            "viewName": "View5"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "zz1cartoes.view.View1",
+      "type": "XML"
+    }
+  }
+}

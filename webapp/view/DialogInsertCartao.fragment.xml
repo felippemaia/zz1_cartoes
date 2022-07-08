@@ -1,0 +1,27 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core" id="fr1">
+    <Dialog title="{i18n>edittitle}" class="sapUiPopupWithPadding" contentWidth="100px" id="tab" resizable="true" draggable="true">
+        <!--		<Label text="FUNÇÃO" required="true"/>
+		<Input id="FUNCAO"/>-->
+        <Label id="_IDGenLabel1" text="{i18n>lblCartaoUnico}" required="true"/>
+        <Select id="iCartaoUnico" width="100%" selectedKey="false">
+            <core:Item id="_IDGenItem3" key="false" text="Não"/>
+            <core:Item id="_IDGenItem4" key="true" text="Sim"/>
+        </Select>
+        <Label id="_IDGenLabel4" text="{i18n>lblQtdDeCartao}" required="true"/>
+        <Input id="iQtdDeCartao"/>
+        <Label id="_IDGenLabel5" text="{i18n>lblQtdPorCartao}" required="true"/>
+        <Input id="iQtdPorCartao"/>
+        <Label id="_IDGenLabel6" text="{i18n>lblUtilizarLivre}" required="true"/>
+        <Select id="iUtilizarLivre" width="100%" selectedKey="false" change="onEstoque">
+            <core:Item id="_IDGenItem5" key="false" text="Não"/>
+            <core:Item id="_IDGenItem6" key="true" text="Sim"/>
+        </Select>
+        <beginButton>
+            <Button id="ok" text="Ok" press="UpdateTableItens" visible="true" type="Emphasized"/>
+        </beginButton>
+        <endButton>
+            <Button id="cancel" text="{i18n>btnCancel}" press="DialogInsert_Cancel" visible="true"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
